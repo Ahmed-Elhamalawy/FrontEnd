@@ -1,0 +1,30 @@
+.active {
+  color: #ff324d;
+}
+#left-arrow::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid black;
+  margin-right: 5px;
+}
+
+/* left Arrow */
+#left-arrow::before:hover {
+  background: #ff324d;
+}
+
+/* down Arrow */
+#down-arrow::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid black;
+  margin-left: 5px;
+}
