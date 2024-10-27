@@ -4,6 +4,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import Accordion from "./Accordion";
 import Logoimg from "../../../src/images/logo_dark .png";
 import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 
 const SmScreenNavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -19,14 +20,17 @@ const SmScreenNavBar = () => {
   }, [carts]);
   const [totalQuantity, setTotalQuantity] = useState(0);
   return (
-    <nav className="lg:hidden w-full flex flex-col  h-16 z-50  px-4 sm:px-4">
+    <nav className="lg:hidden w-full flex flex-col  h-16   px-4 sm:px-4 z-30">
       <div className="flex flex-row px-10 justify-between w-full h-16 items-center">
         <div>
           <img src={Logoimg} alt="" href="/" className="w-25 h-10" />
         </div>
         <div className="flex gap-3 relative">
           <CiSearch className="text-2xl h-full " />
-          <CiShoppingCart className="text-2xl h-full " />
+
+          <NavLink to={"/ShoppingCart"}>
+            <CiShoppingCart className="text-xl h-full peer cursor-pointer" />
+          </NavLink>
           <button onClick={toggleMenu}>
             <RxHamburgerMenu />
           </button>

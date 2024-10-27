@@ -28,14 +28,13 @@ const Login = () => {
         <div id="loginContainer" data-aos="fade-in">
           <div className="h-screen w-full bg-gray-100 flex  items-center justify-center ">
             <div
-              className="backdrop-blur-sm w-1/3 min-h-40 rounded-md shadow-md text-center py-4 px-3 "
+              className="backdrop-blur-sm w-full max-md:mx-12 md:w-1/3 min-h-40 rounded-md shadow-md text-center py-4 px-3 "
               data-aos="fade-up"
             >
               <div
                 id="login-logo"
                 className="text-2xl font-bold  text-white mb-5"
               ></div>
-
               <LoginForm />
             </div>
           </div>

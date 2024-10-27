@@ -31,7 +31,7 @@ const HeaderSwiper = () => {
               position: "relative",
             }}
           >
-            <div className="flex flex-col gap-5 absolute  translate-y-48 translate-x-28">
+            <div className="flex flex-col gap-5 absolute  translate-y-48 translate-x-28 max-md:translate-x-5">
               <h3 id="firstSlide" className="text-2xl font-semibold">
                 Get up to 50% off Today Only!
               </h3>
@@ -53,7 +53,7 @@ const HeaderSwiper = () => {
               backgroundPosition: "center",
             }}
           >
-            <div className="flex flex-col gap-5 absolute translate-y-48 translate-x-28">
+            <div className="flex flex-col gap-5 absolute translate-y-48 translate-x-28 max-md:translate-x-5">
               <h3 id="firstSlide" className="text-2xl font-semibold  ">
                 50% off in all products
               </h3>
@@ -75,7 +75,7 @@ const HeaderSwiper = () => {
               backgroundPosition: "center",
             }}
           >
-            <div className="flex flex-col gap-5  absolute translate-y-48 translate-x-28">
+            <div className="flex flex-col gap-5  absolute translate-y-48 translate-x-28 max-md:translate-x-5">
               <h3 id="firstSlide" className="text-2xl font-semibold">
                 Taking your Viewing Experience to Next Level
               </h3>

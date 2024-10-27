@@ -5,9 +5,11 @@ const Accordion = () => {
     <div className="join join-vertical w-full ">
       <div className="collapse collapse-arrow join-item ">
         <input type="radio" name="my-accordion-4" />
-        <div className="collapse-title text-sm  font-medium">HOME</div>
+        <NavLink to={"/"} className="collapse-title text-sm  font-medium">
+          HOME
+        </NavLink>
         <div className="collapse-content flex flex-col gap-1">
-          <p>Fashion 1</p>
+          <NavLink to={"/"}>Fashion 1</NavLink>
           <p>Fashion 2</p>
           <p>Furniture 1</p>
           <p>Furniture 2</p>
@@ -20,7 +22,7 @@ const Accordion = () => {
         <div className="collapse-title text-sm  font-medium">PAGES</div>
         <div className="collapse-content">
           <p>About us</p>
-          <p> Contact us</p>
+          <NavLink to={"/contact-us"}> Contact us</NavLink>
           <p>Faq</p>
           <p>404 Error page</p>
           <p> Login</p>

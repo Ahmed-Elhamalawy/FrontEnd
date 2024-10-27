@@ -28,7 +28,7 @@ const LoginForm = () => {
   console.log(formState.errors);
   return (
     <form onSubmit={handleSubmit(submitFormHandler)}>
-      <div className="mt-4 relative flex flex-col gap-5">
+      <div className="mt-4 relative flex flex-col gap-5 ">
         <input
           {...register("email")}
           type="text"

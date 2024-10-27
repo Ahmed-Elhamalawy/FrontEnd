@@ -8,17 +8,8 @@ import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
 const ShoppingCart = () => {
   const carts = useSelector((store) => store.cart.items);
-  console.log(carts);
-  console.log(carts.image);
 
   const [loading, setLoading] = useState(false);
-  const [counter, setCounter] = useState(0);
-  const increamentHandler = () => {
-    setCounter((value) => value + 1);
-  };
-  const decreamentHandler = () => {
-    setCounter((value) => value - 1);
-  };
 
   useEffect(() => {
     setLoading(true);
@@ -49,13 +40,19 @@ const ShoppingCart = () => {
             {
               <div>
                 {carts.length > 0 ? (
-                  <div className="grid grid-cols-5  text-center  mx-24 border-b border-black border-opacity-20 pb-3">
-                    <li className="list-none col-span-2 font-bold text-2xl">
+                  <div className="grid grid-cols-5  text-center  mx-24 max-md:mx-2 border-b border-black border-opacity-20 pb-3">
+                    <li className="list-none col-span-2 font-bold text-2xl max-md:text-sm">
                       Product
                     </li>
-                    <li className="list-none font-bold text-2xl">Price</li>
-                    <li className="list-none font-bold text-2xl">Quantity</li>
-                    <li className="list-none font-bold text-2xl">Total</li>
+                    <li className="list-none font-bold text-2xl max-md:text-sm">
+                      Price
+                    </li>
+                    <li className="list-none font-bold text-2xl max-md:text-sm">
+                      Quantity
+                    </li>
+                    <li className="list-none font-bold text-2xl max-md:text-sm">
+                      Total
+                    </li>
                   </div>
                 ) : (
                   <span className="w-full flex justify-center items-center text-3xl font-bold ">
@@ -68,10 +65,13 @@ const ShoppingCart = () => {
               {carts.map((item) => (
                 <div
                   key={item.id}
-                  className="grid grid-cols-5  bg-white text-center my-3 mx-24 border-b border-black border-opacity-20"
+                  className="grid grid-cols-5 bg-white text-center my-3 mx-24 max-md:mx-2 border-b border-black border-opacity-20"
                 >
                   <div className="col-span-2 flex justify-center items-center gap-4">
-                    <img src={item.image} className="size-44  p-2  " />
+                    <img
+                      src={item.image}
+                      className="size-44  p-2 max-md:hidden  "
+                    />
                     <h1 className="w-32">{item.title}</h1>
                   </div>
                   <div className="flex items-center justify-center">
@@ -80,16 +80,13 @@ const ShoppingCart = () => {
                   <div className="flex items-center justify-center">
                     {/* <h2 className="text-center"> {item.quantity}</h2> */}
 
-                    <button
-                      onClick={decreamentHandler}
-                      disabled={counter === 1}
-                    >
+                    <button>
                       <AiOutlineMinus className=" size-5 mx-2 p-1 bg-black bg-opacity-20 rounded-full hover:bg-light" />
                     </button>
                     <div className="border border-black border-opacity-40 w-16 h-10 text-center text-3xl">
                       {item.quantity}
                     </div>
-                    <button onClick={increamentHandler}>
+                    <button>
                       <AiOutlinePlus className="size-5 mx-2 p-1 bg-black bg-opacity-20 rounded-full hover:bg-light" />
                     </button>
                   </div>

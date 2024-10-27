@@ -18,4 +18,7 @@ export default {
     extend: {},
   },
   plugins: [daisyui],
+  daisyui: {
+    darkTheme: false,
+  },
 };

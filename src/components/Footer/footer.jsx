@@ -14,7 +14,7 @@ import LogoLight from "../../images/logo_light.png";
 const Footer = () => {
   return (
     <section>
-      <div className="px-10 sm:px-10 lg:px-24 grid sm:grid-cols-1 lg:grid-cols-2 sm:grid grid-cols-1 bg-red h-40 mt-40 items-center">
+      <div className="px-10 h-auto py-12 my sm:px-10 lg:px-24 grid sm:grid-cols-1 lg:grid-cols-2 sm:grid grid-cols-1 bg-red mt-40 items-center">
         <span className="text-3xl font-bold text-white mt-5 mb-5">
           Subscribe Our Newsletter
         </span>

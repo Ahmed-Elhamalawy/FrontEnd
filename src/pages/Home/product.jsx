@@ -96,11 +96,11 @@ const FetchSingleProduct = () => {
             </div>
 
             <section className="grid grid-cols-1 lg:grid-cols-2 sm:mx-10 lg:mx-24 gap-10 ">
-              <div className=" border-light border-opacity-50 border ">
-                <div className=" relative bg-white m-2 w-auto flex items-center justify-center">
-                  <div className="absolute top-0 left-0 bottom-0  w-full h-auto bg-black opacity-5  "></div>
+              <div className=" max-h-[528px] border-light border-opacity-50 border ">
+                <div className=" h-[500px] relative bg-white m-2 w-auto flex items-center justify-center">
+                  <div className="h-full absolute top-0 left-0 bottom-0  w-full  bg-black opacity-5  "></div>
                   <img
-                    className="size-5/6 self-center"
+                    className="max-h-[500px]  self-center"
                     src={item.image}
                     alt=""
                   />
