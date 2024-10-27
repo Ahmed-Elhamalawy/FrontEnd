@@ -15,10 +15,6 @@ function App() {
       element: <Mainlayout />,
       children: [
         { index: true, element: <AuthProvider component={Fashion1} /> },
-        { path: "/New Arrival", element: <Fashion1 /> },
-        { path: "/Best Sellers", element: <Fashion1 /> },
-        { path: "/Featured", element: <Fashion1 /> },
-        { path: "/Special Offer", element: <Fashion1 /> },
         { path: "/contact-us", element: <ContactUs /> },
         { path: "/product/:id", element: <FetchSingleProduct /> },
         { path: "/ShoppingCart", element: <ShoppingCart /> },
